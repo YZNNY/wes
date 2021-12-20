@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Upload Image to check wes-anderson style</title>
+    </head>
+    <body>
+        <h1>내 사진은 얼마나 웨스 앤더슨 스타일일까?</h1>
+        <p>분석한 사진들</p>
+        <table>
+            {% for list in postlist %}
+                <!-- 게시글 클릭시 세부페이지로 넘어갑니다-->
+                <ul>
+                    <li><a href="{{list.pk}}/">{{list.postname}}</a></li>
+                </ul>
+            {% endfor %}
+        </table>
+        <p>
+            <button>
+                <a href="new_post/">새로 업로드</a>
+            </button>
+        </p>
+    </body>
+</html>

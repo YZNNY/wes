@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>분석 결과</title>
+    </head>
+    <body>
+        <h1>당신의 사진은 n% 대칭입니다. <br> 웨스 앤더슨 스타일 점수는 n점입니다!</h1>
+        <p>{{post.postname}}</p>
+        <p>{{post.contents}}</p>
+        <!-- 이미지 보여주기 -->
+        {% if post.photo %}
+            <img src = "{{post.photo.url}}" alt="" height="600">
+            <br>
+        {% endif %}
+        <a href="/upload/{{post.pk}}/result">사진 변환하기</a>
+        <a href="/upload/{{post.pk}}/remove">사진 삭제하기</a>
+        <a href="/upload/">목록</a>
+    </body>
+</html>

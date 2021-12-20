@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>변환 결과!</title>
+    </head>
+    <body>
+        <h1>웨스 앤더슨 스타일로 편집한 당신의 추억입니다!</h1>
+        <p>{{post.postname}}</p>
+        <p>{{post.contents}}</p>
+        <!-- 이미지 보여주기 -->
+        {% if post.photo %}
+            <img src = "{{post.photo.url}}" alt="" height="600">
+            <br>
+        {% endif %}
+        <a href="/upload/{{post.pk}}/">분석 결과 페이지로 돌아가기</a>
+        <a href="/upload/">목록</a>
+    </body>
+</html>

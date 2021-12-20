@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>업로드 페이지</title>
+</head>
+<body>
+    <h1>당신의 사진을 올려 웨스 앤더슨 스타일인지 분석해 보세요.</h1>
+    <form method="POST">
+        {% csrf_token %}
+        사진의 이름을 적어 주세요.<br>
+        <input type="text" name="postname"><br><br>
+        당신의 추억을 기록하세요.<br>
+        <textarea rows="5" cols="50" name="contents"></textarea><br><br>
+        당신의 사진을 업로드해 주세요.<br>
+        <input type="file" name="photo"><br><br>
+        <input type="submit" value="업로드 및 분석 시작">
+    </form>
+    <a href="/upload/">뒤로</a>
+
+</body>
+</html>
